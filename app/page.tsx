@@ -39,6 +39,15 @@ export default function Home() {
     <section className="accountability"><div className="accountability-copy"><p className="eyebrow dark"><span/> Главное обещание</p><h2>Каждую четверть<br/><em>мы отчитаемся.</em></h2><p>Что сделано. Что в работе. Что не получилось — и почему. Без красивых слов вместо результата.</p></div>
       <div className="report-card"><div className="report-head"><span>ОТЧЁТ / 01</span><Trophy size={22}/></div><div className="report-line"><Check size={18}/><span><b>Сделано</b><small>конкретный результат</small></span></div><div className="report-line"><span className="pulse"/><span><b>В работе</b><small>срок и ответственный</small></span></div><div className="report-line"><MessageCircleMore size={18}/><span><b>Ответ классу</b><small>без игнора</small></span></div></div>
     </section>
+    <section className="vision-section" aria-label="Визуальный стиль кампании">
+      <header><p>Наш темп</p><h2>Больше<br/><span>жизни.</span></h2></header>
+      <div className="vision-grid">
+        <figure className="vision-card hall"><img src="/vision-hallway.png" alt="Школьный коридор в неоновом свете"/><figcaption>Движение</figcaption></figure>
+        <figure className="vision-card duo"><img src="/vision-duo.png" alt="Двое учеников в ярком постерном стиле"/><figcaption>Команда</figcaption></figure>
+        <figure className="vision-card business"><img src="/vision-business.png" alt="Команда учеников работает над проектом"/><figcaption>Идеи в дело</figcaption></figure>
+        <figure className="vision-card events"><img src="/vision-events.png" alt="Яркое школьное событие"/><figcaption>События</figcaption></figure>
+      </div>
+    </section>
     <footer><p>ШИБАНОВ <span>×</span> КУДАЙБЕРГЕНОВ</p><h2>ТВОЙ ГОЛОС.<br/><span>НАША ОТВЕТСТВЕННОСТЬ.</span></h2><a href="#top">Наверх ↑</a></footer>
   </main>;
 }

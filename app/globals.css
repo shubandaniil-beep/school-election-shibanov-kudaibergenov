@@ -63,11 +63,25 @@ a { color:inherit; text-decoration:none; }
 .report-line b { text-transform:uppercase; font-size:13px; }
 .report-line small { color:#5f6170; margin-top:3px; }
 .pulse { width:15px; height:15px; background:#f02c54; border-radius:50%; box-shadow:0 0 0 5px #f02c5424; }
+.vision-section { padding:clamp(72px,9vw,120px) clamp(20px,5vw,72px); background:var(--paper); }
+.vision-section header { display:flex; align-items:end; justify-content:space-between; margin-bottom:42px; }
+.vision-section header p { margin:0 0 6px; font-size:12px; font-weight:900; letter-spacing:.15em; text-transform:uppercase; }
+.vision-section h2 { margin:0; font-family:var(--font-unbounded); text-transform:uppercase; font-size:clamp(46px,7vw,94px); letter-spacing:-.07em; line-height:.88; }
+.vision-section h2 span { color:#f02c54; }
+.vision-grid { display:grid; grid-template-columns:1.3fr .7fr; grid-template-rows:300px 300px; gap:16px; }
+.vision-card { margin:0; min-height:0; position:relative; overflow:hidden; background:var(--ink); border:2px solid var(--ink); }
+.vision-card img { width:100%; height:100%; display:block; object-fit:cover; transition:transform .4s; }
+.vision-card:hover img { transform:scale(1.035); }
+.vision-card figcaption { position:absolute; left:0; bottom:0; margin:0; padding:10px 14px; color:var(--ink); background:var(--lime); text-transform:uppercase; font-weight:900; font-size:12px; }
+.vision-card.hall { grid-row:span 2; }
+.vision-card.hall img { object-position:center bottom; }
+.vision-card.duo img { object-position:center 48%; }
+.vision-card.events img { object-position:center 69%; }
 footer { background:var(--ink); color:white; padding:clamp(70px,10vw,130px) clamp(22px,6vw,90px) 35px; }
 footer p { font-family:var(--font-unbounded); font-size:11px; font-weight:900; }
 footer h2 { font-family:var(--font-unbounded); font-size:clamp(40px,7.6vw,112px); line-height:.9; letter-spacing:-.07em; margin:50px 0 70px; }
 footer h2 span { color:var(--lime); }
 footer>a { display:block; text-align:right; text-transform:uppercase; font-weight:900; font-size:12px; }
 @media(max-width:900px){.hero{grid-template-columns:1fr}.candidate-lockup{min-height:530px}.candidate-one{top:2%;left:8%}.candidate-two{right:8%;bottom:3%}.section-heading{grid-template-columns:1fr}.section-heading>p:first-child{margin-bottom:-15px}.program-grid{grid-template-columns:repeat(2,1fr)}.numbers-section{grid-template-columns:repeat(2,1fr)}.accountability{grid-template-columns:1fr}}
-@media(max-width:600px){.nav-shell{height:62px}.brand{max-width:180px;line-height:1.2}.nav-cta{font-size:0;border:2px solid var(--ink);padding:8px}.hero{min-height:auto}.hero-copy{padding-top:58px;padding-bottom:38px}.candidate-lockup{min-height:410px}.candidate>span{width:190px}.candidate-one{left:4%}.candidate-two{right:3%;bottom:1%}.candidate small{font-size:11px}.vote-sticker{width:93px;font-size:10px;left:6%;bottom:9%}.manifesto-strip{justify-content:flex-start;gap:14px}.manifesto-strip span{font-size:12px}.program-grid{grid-template-columns:1fr}.program-card{min-height:290px}.numbers-section{grid-template-columns:1fr}.numbers-section>div{padding:27px 22px;border-bottom:1px solid #39405d}.report-card{box-shadow:8px 8px 0 var(--ink)}}
+@media(max-width:600px){.nav-shell{height:62px}.brand{max-width:180px;line-height:1.2}.nav-cta{font-size:0;border:2px solid var(--ink);padding:8px}.hero{min-height:auto}.hero-copy{padding-top:58px;padding-bottom:38px}.candidate-lockup{min-height:410px}.candidate>span{width:190px}.candidate-one{left:4%}.candidate-two{right:3%;bottom:1%}.candidate small{font-size:11px}.vote-sticker{width:93px;font-size:10px;left:6%;bottom:9%}.manifesto-strip{justify-content:flex-start;gap:14px}.manifesto-strip span{font-size:12px}.program-grid{grid-template-columns:1fr}.program-card{min-height:290px}.numbers-section{grid-template-columns:1fr}.numbers-section>div{padding:27px 22px;border-bottom:1px solid #39405d}.report-card{box-shadow:8px 8px 0 var(--ink)}.vision-section header{display:block}.vision-section header p{margin-bottom:18px}.vision-grid{grid-template-columns:1fr;grid-template-rows:280px 220px 220px 280px}.vision-card.hall{grid-row:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}

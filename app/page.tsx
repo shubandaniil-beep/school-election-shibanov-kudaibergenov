@@ -9,6 +9,7 @@ const program = [
   { number: '06', icon: BarChart3, title: 'Парламент отвечает', text: 'Отчёт каждую четверть, итоги года, открытый час раз в месяц и обязательный ответ на обращение класса.', accent: 'white' },
 ];
 const accents: Record<string, string> = { lime: 'bg-[#dfff31]', white: 'bg-white', blue: 'bg-[#74d7ff]', pink: 'bg-[#ff8eca]' };
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Home() {
   return <main>
@@ -25,7 +26,7 @@ export default function Home() {
         <a className="primary-button" href="#program">Смотреть программу <ArrowDown size={19}/></a>
       </div>
       <div className="candidate-lockup">
-        <img className="hero-photo" src="/vision-hallway.png" alt="" aria-hidden="true"/>
+        <img className="hero-photo" src={`${basePath}/vision-hallway.png`} alt="" aria-hidden="true"/>
         <div className="candidate candidate-one"><span>ДШ</span><small>Даниил<br/><b>Шибанов</b></small></div>
         <div className="candidate candidate-two"><span>ТК</span><small>Таир<br/><b>Кудайбергенов</b></small></div>
         <div className="vote-sticker"><Check size={25} strokeWidth={3}/> ТВОЙ<br/>ВЫБОР</div>
@@ -33,7 +34,7 @@ export default function Home() {
     </section>
     <section className="manifesto-strip"><span>БИЗНЕС</span><i/><span>IT</span><i/><span>СОБЫТИЯ</span><i/><span>ОТВЕТСТВЕННОСТЬ</span></section>
     <figure className="reveal-moment team-moment">
-      <img src="/vision-duo.png" alt="Команда учеников в ярком постерном стиле"/>
+      <img src={`${basePath}/vision-duo.png`} alt="Команда учеников в ярком постерном стиле"/>
       <figcaption><span>01 / Команда</span><strong>Двое. Одна цель.</strong></figcaption>
     </figure>
     <section className="program-section" id="program">
@@ -41,7 +42,7 @@ export default function Home() {
       <div className="program-grid">{program.map(item => { const Icon=item.icon; return <article className={`program-card ${accents[item.accent]}`} key={item.number}><div className="card-top"><span>{item.number}</span><Icon size={30}/></div><h3>{item.title}</h3><p>{item.text}</p></article>; })}</div>
     </section>
     <figure className="reveal-moment business-moment">
-      <img src="/vision-business.png" alt="Ученики работают над бизнес-проектом"/>
+      <img src={`${basePath}/vision-business.png`} alt="Ученики работают над бизнес-проектом"/>
       <figcaption><span>02 / Бизнес</span><strong>Идеи — в дело.</strong></figcaption>
     </figure>
     <section className="numbers-section"><div><strong>↑</strong><span>дискотек<br/>станет больше</span></div><div><strong>↑</strong><span>бизнес-ярмарок<br/>станет больше</span></div><div><strong>3</strong><span>IT-соревнования<br/>с результатом</span></div><div><strong>4</strong><span>отчёта парламента<br/>за учебный год</span></div></section>
@@ -49,7 +50,7 @@ export default function Home() {
       <div className="report-card"><div className="report-head"><span>ОТЧЁТ / 01</span><Trophy size={22}/></div><div className="report-line"><Check size={18}/><span><b>Сделано</b><small>конкретный результат</small></span></div><div className="report-line"><span className="pulse"/><span><b>В работе</b><small>срок и ответственный</small></span></div><div className="report-line"><MessageCircleMore size={18}/><span><b>Ответ классу</b><small>без игнора</small></span></div></div>
     </section>
     <figure className="reveal-moment event-moment">
-      <img src="/vision-events.png" alt="Яркое школьное событие"/>
+      <img src={`${basePath}/vision-events.png`} alt="Яркое школьное событие"/>
       <figcaption><span>03 / События</span><strong>Школа должна жить.</strong></figcaption>
     </figure>
     <footer><p>ШИБАНОВ <span>×</span> КУДАЙБЕРГЕНОВ</p><h2>ТВОЙ ГОЛОС.<br/><span>НАША ОТВЕТСТВЕННОСТЬ.</span></h2><a href="#top">Наверх ↑</a></footer>

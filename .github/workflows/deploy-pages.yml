@@ -27,6 +27,7 @@ jobs:
       - run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /school-election-shibanov-kudaibergenov
+      - run: touch dist/client/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/client

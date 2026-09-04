@@ -25,29 +25,33 @@ export default function Home() {
         <a className="primary-button" href="#program">Смотреть программу <ArrowDown size={19}/></a>
       </div>
       <div className="candidate-lockup">
+        <img className="hero-photo" src="/vision-hallway.png" alt="" aria-hidden="true"/>
         <div className="candidate candidate-one"><span>ДШ</span><small>Даниил<br/><b>Шибанов</b></small></div>
         <div className="candidate candidate-two"><span>ТК</span><small>Таир<br/><b>Кудайбергенов</b></small></div>
         <div className="vote-sticker"><Check size={25} strokeWidth={3}/> ТВОЙ<br/>ВЫБОР</div>
       </div>
     </section>
     <section className="manifesto-strip"><span>БИЗНЕС</span><i/><span>IT</span><i/><span>СОБЫТИЯ</span><i/><span>ОТВЕТСТВЕННОСТЬ</span></section>
+    <figure className="reveal-moment team-moment">
+      <img src="/vision-duo.png" alt="Команда учеников в ярком постерном стиле"/>
+      <figcaption><span>01 / Команда</span><strong>Двое. Одна цель.</strong></figcaption>
+    </figure>
     <section className="program-section" id="program">
       <header className="section-heading"><p>6 направлений</p><h2>Наша<br/><span>программа</span></h2><p className="section-intro">Не присваиваем то, что уже сделано. Улучшаем то, что работает, и запускаем то, чего не хватает.</p></header>
       <div className="program-grid">{program.map(item => { const Icon=item.icon; return <article className={`program-card ${accents[item.accent]}`} key={item.number}><div className="card-top"><span>{item.number}</span><Icon size={30}/></div><h3>{item.title}</h3><p>{item.text}</p></article>; })}</div>
     </section>
+    <figure className="reveal-moment business-moment">
+      <img src="/vision-business.png" alt="Ученики работают над бизнес-проектом"/>
+      <figcaption><span>02 / Бизнес</span><strong>Идеи — в дело.</strong></figcaption>
+    </figure>
     <section className="numbers-section"><div><strong>1×</strong><span>дискотека<br/>каждый месяц</span></div><div><strong>6</strong><span>бизнес-ярмарок<br/>за учебный год</span></div><div><strong>3</strong><span>IT-соревнования<br/>с результатом</span></div><div><strong>4</strong><span>отчёта парламента<br/>за учебный год</span></div></section>
     <section className="accountability"><div className="accountability-copy"><p className="eyebrow dark"><span/> Главное обещание</p><h2>Каждую четверть<br/><em>мы отчитаемся.</em></h2><p>Что сделано. Что в работе. Что не получилось — и почему. Без красивых слов вместо результата.</p></div>
       <div className="report-card"><div className="report-head"><span>ОТЧЁТ / 01</span><Trophy size={22}/></div><div className="report-line"><Check size={18}/><span><b>Сделано</b><small>конкретный результат</small></span></div><div className="report-line"><span className="pulse"/><span><b>В работе</b><small>срок и ответственный</small></span></div><div className="report-line"><MessageCircleMore size={18}/><span><b>Ответ классу</b><small>без игнора</small></span></div></div>
     </section>
-    <section className="vision-section" aria-label="Визуальный стиль кампании">
-      <header><p>Наш темп</p><h2>Больше<br/><span>жизни.</span></h2></header>
-      <div className="vision-grid">
-        <figure className="vision-card hall"><img src="/vision-hallway.png" alt="Школьный коридор в неоновом свете"/><figcaption>Движение</figcaption></figure>
-        <figure className="vision-card duo"><img src="/vision-duo.png" alt="Двое учеников в ярком постерном стиле"/><figcaption>Команда</figcaption></figure>
-        <figure className="vision-card business"><img src="/vision-business.png" alt="Команда учеников работает над проектом"/><figcaption>Идеи в дело</figcaption></figure>
-        <figure className="vision-card events"><img src="/vision-events.png" alt="Яркое школьное событие"/><figcaption>События</figcaption></figure>
-      </div>
-    </section>
+    <figure className="reveal-moment event-moment">
+      <img src="/vision-events.png" alt="Яркое школьное событие"/>
+      <figcaption><span>03 / События</span><strong>Школа должна жить.</strong></figcaption>
+    </figure>
     <footer><p>ШИБАНОВ <span>×</span> КУДАЙБЕРГЕНОВ</p><h2>ТВОЙ ГОЛОС.<br/><span>НАША ОТВЕТСТВЕННОСТЬ.</span></h2><a href="#top">Наверх ↑</a></footer>
   </main>;
 }

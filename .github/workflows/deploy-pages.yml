@@ -27,7 +27,11 @@ jobs:
       - run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /school-election-shibanov-kudaibergenov
-      - run: touch dist/client/.nojekyll
+      - name: Prepare static assets for GitHub Pages
+        run: |
+          mv dist/client/school-election-shibanov-kudaibergenov/_next dist/client/assets
+          find dist/client -type f \( -name '*.html' -o -name '*.rsc' -o -name '*.js' \) -exec sed -i 's|/school-election-shibanov-kudaibergenov/_next/|/school-election-shibanov-kudaibergenov/assets/|g' {} +
+          touch dist/client/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/client

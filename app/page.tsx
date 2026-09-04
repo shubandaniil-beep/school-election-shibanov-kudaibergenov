@@ -1,7 +1,7 @@
 import { ArrowDown, BarChart3, Bot, BriefcaseBusiness, Check, FileUser, Headphones, MessageCircleMore, Music2, Trophy } from 'lucide-react';
 
 const program = [
-  { number: '01', icon: Music2, title: 'Больше движа', text: 'Дискотека каждый месяц, вечера настольных игр и квиз «Ученики против учителей».', accent: 'lime' },
+  { number: '01', icon: Music2, title: 'Больше движа', text: 'Дискотек станет больше, а ещё — вечера настольных игр и квиз «Ученики против учителей».', accent: 'lime' },
   { number: '02', icon: BriefcaseBusiness, title: 'Бизнес на практике', text: 'Бизнес-ярмарка каждые 6 недель и новый бизнес-спринт: от идеи до проверки спроса за 7 дней.', accent: 'white' },
   { number: '03', icon: Bot, title: 'IT-лига', text: 'Три больших события: хакатон, конкурс сайтов и AI-чемпионат с реальными задачами.', accent: 'blue' },
   { number: '04', icon: Headphones, title: 'Подкасты чаще', text: 'Минимум два выпуска в месяц: истории учеников, бизнес, IT, школьные проекты и честные разговоры.', accent: 'white' },
@@ -44,7 +44,7 @@ export default function Home() {
       <img src="/vision-business.png" alt="Ученики работают над бизнес-проектом"/>
       <figcaption><span>02 / Бизнес</span><strong>Идеи — в дело.</strong></figcaption>
     </figure>
-    <section className="numbers-section"><div><strong>1×</strong><span>дискотека<br/>каждый месяц</span></div><div><strong>6</strong><span>бизнес-ярмарок<br/>за учебный год</span></div><div><strong>3</strong><span>IT-соревнования<br/>с результатом</span></div><div><strong>4</strong><span>отчёта парламента<br/>за учебный год</span></div></section>
+    <section className="numbers-section"><div><strong>↑</strong><span>дискотек<br/>станет больше</span></div><div><strong>6</strong><span>бизнес-ярмарок<br/>за учебный год</span></div><div><strong>3</strong><span>IT-соревнования<br/>с результатом</span></div><div><strong>4</strong><span>отчёта парламента<br/>за учебный год</span></div></section>
     <section className="accountability"><div className="accountability-copy"><p className="eyebrow dark"><span/> Главное обещание</p><h2>Каждую четверть<br/><em>мы отчитаемся.</em></h2><p>Что сделано. Что в работе. Что не получилось — и почему. Без красивых слов вместо результата.</p></div>
       <div className="report-card"><div className="report-head"><span>ОТЧЁТ / 01</span><Trophy size={22}/></div><div className="report-line"><Check size={18}/><span><b>Сделано</b><small>конкретный результат</small></span></div><div className="report-line"><span className="pulse"/><span><b>В работе</b><small>срок и ответственный</small></span></div><div className="report-line"><MessageCircleMore size={18}/><span><b>Ответ классу</b><small>без игнора</small></span></div></div>
     </section>
